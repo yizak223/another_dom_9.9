@@ -1,3 +1,4 @@
+var tdListUser;
 sendBtn.addEventListener('click',
 function () {
 
@@ -14,13 +15,22 @@ function () {
     <input id='DoneMission' type="text" placeholder="is it done?">
     <button id='addLine'>add</button>
     `
+    userList.innerHTML+=
+    `<thead>
+    <th>Title</th><th>Explanasion</th><th>until</th><th>done?</th>
+    </thead>`
+    userList.style=
+    `
+    border-collapse: collapse;
+    border: 1px solid;
+    width: 100%;
+    border: 1px solid;
+    `
     addLine.addEventListener('click',
 function () {
+    tdListUser=document.getElementById('td')
     userList.innerHTML+=
     `
-    <thead>
-        <th>Title</th><th>Explanasion</th><th>until</th><th>done?</th>
-    </thead>
     <tbody id='bosyUserList'>
     <tr>
         <td>${titleMission.value}</td>
